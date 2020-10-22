@@ -2,7 +2,7 @@ version: "3"
 services:
   app:
     container_name: express-mongo
-    image: ftperez11 / reviews-sdc_app:latest
+    image: ftperez11/reviews-sdc_app:latest
     restart: always
     # build: ./
     # command: bash -c 'npm start'
