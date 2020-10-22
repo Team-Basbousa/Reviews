@@ -31,18 +31,6 @@ module.exports = {
                 })
             })
             .catch((err) => console.log(err))
-           
-        // return Reviews.create({
-        //     "product_id": id,
-        //     "rating": rating,
-        //     "summary": summary,
-        //     "body": body,
-        //     "recommend": recommend,
-        //     "reviewer_name": name,
-        //     "reviewer_email": email,
-        //     "photos": [photos],
-        //     "characteristics": characteristics 
-        // })
     },
     markHelpful: (id) => {
         const filter = { id: id };

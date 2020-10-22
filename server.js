@@ -1,14 +1,17 @@
 const express = require('express')
 const path = require('path')
+const cors = require('cors')
 const bodyParser = require('body-parser')
 const PORT = process.env.PORT || 5001;
 const db = require('./database/index')
 const routes = require("./routes.js")
 const app = express()
 
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
+app.get('/', (req, res) => res.status(200).send('hello'));
 app.use('/', routes)
 
 
