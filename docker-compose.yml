@@ -10,8 +10,12 @@ services:
       - "80:5001"
     # volumes:
     #   - .:/app
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/reviewsdb
+    volumes:
+      - .:/app
     links:
-      - mongo
+      - mongodb
   mongo:
     container_name: mongo
     image: mongo
